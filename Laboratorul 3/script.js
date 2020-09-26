@@ -1,4 +1,4 @@
-const correctAnswers = ["answer1a", "answer2a", "answer3a", "answer4a", "answer5a", "answer6a", "answer7a", "answer8a", "answer9a", "answer10a"]
+const correctAnswers = ["answer1d", "answer2b", "answer3d", "answer4a", "answer5e", "answer6b", "answer7d", "answer8a", "answer9c", "answer10b"]
 const spaceForTextIds = ["text-answer1", "text-answer2", "text-answer3", "text-answer4", "text-answer5", "text-answer6", "text-answer7", "text-answer8", "text-answer9", "text-answer10"]
 
 const answerIds = [
@@ -18,18 +18,38 @@ let arrayWithCheckedItems = []
 let raspunsuriCorecte = 0
 
 function showResults(){
+  
+  const numberOfCheckedItems = verifyIfAllChecked()
+  if(numberOfCheckedItems == 10) {
+    document.getElementById("danger-notification").style.visibility = "hidden"
     for(let i = 0; i < answerIds.length; i++) {
-        for(let j = 0; j < answerIds[i].length; j++) {
-            if(document.getElementById(answerIds[i][j]).checked == true) {
-                arrayWithCheckedItems.push(answerIds[i][j])
-            }
+      for(let j = 0; j < answerIds[i].length; j++) {
+        if(document.getElementById(answerIds[i][j]).checked == true) {
+          arrayWithCheckedItems.push(answerIds[i][j])
         }
-        document.getElementById(spaceForTextIds[i]).innerHTML = document.getElementById(arrayWithCheckedItems[i]).value
-        document.getElementById(spaceForTextIds[i]).style.fontWeight = "Bold"
+      }
+      document.getElementById(spaceForTextIds[i]).innerHTML = document.getElementById(arrayWithCheckedItems[i]).value
+      document.getElementById(spaceForTextIds[i]).style.fontWeight = "Bold"
     }
 
     colorSpaces()
     document.getElementById("grade").innerHTML = raspunsuriCorecte
+  } else {
+    document.getElementById("danger-notification").innerHTML = "Raspunde la toate"
+  }
+}
+
+function verifyIfAllChecked() {
+  let numberOfCheckedItems = 0
+  for(let i = 0; i < answerIds.length; i++) {
+    for(let j = 0; j < answerIds[i].length; j++) {
+      if(document.getElementById(answerIds[i][j]).checked == true) {
+        numberOfCheckedItems++
+      }
+    }
+  }
+
+  return numberOfCheckedItems
 }
 
 function colorSpaces() {
