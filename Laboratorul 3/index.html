@@ -12,36 +12,36 @@
 <h2 style="text-align: center">The logic list</h2>
 <h3>Complete the logic list of words.</h3>
 <ol>
-    <li>
+    <div>
         <form id="form1">
-    <li>
-        Shark, carp, catfish, trout
-        <span id="text-answer1">_______________</span>.
-    </li>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="answer1" id="answer1a" value="salamander" />
-        <label class="form-check-label" for="answer1a">salamander</label>
+            <li>
+                Shark, carp, catfish, trout
+                <span id="text-answer1">_______________</span>.
+            </li>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1a" value="salamander" />
+                <label class="form-check-label" for="answer1a">salamander</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1b" value="toad" />
+                <label class="form-check-label" for="answer1b">toad </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1c" value="frog" />
+                <label class="form-check-label" for="answer1c">frog </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1d" value="herring" />
+                <label class="form-check-label" for="answer1d">herring</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1e" value="turtle" />
+                <label class="form-check-label" for="answer1e">turtle</label>
+            </div>
+        </form>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="answer1" id="answer1b" value="toad" />
-        <label class="form-check-label" for="answer1b">toad </label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="answer1" id="answer1c" value="frog" />
-        <label class="form-check-label" for="answer1c">frog </label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="answer1" id="answer1d" value="herring" />
-        <label class="form-check-label" for="answer1d">herring</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="answer1" id="answer1e" value="turtle" />
-        <label class="form-check-label" for="answer1e">turtle</label>
-    </div>
-    </form>
-    </li>
 
-    <li>
+    <div>
         <form>
     <li>
         Piano, organ, bagpipe, violin
@@ -68,9 +68,9 @@
         <label class="form-check-label" for="answer2e">organic</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Sea, ocean, river, lake
@@ -97,9 +97,9 @@
         <label class="form-check-label" for="answer3e">shelf</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Arm-chair, coffee-table, settee, scatter-cushion
@@ -126,9 +126,9 @@
         <label class="form-check-label" for="answer4e">umbrella stand</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Oak, silver-birch, poplar, willow
@@ -155,9 +155,9 @@
         <label class="form-check-label" for="answer5e">rubber</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Tree, trunk, root, leaf
@@ -184,9 +184,9 @@
         <label class="form-check-label" for="answer6e">mushroom</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Bread, butter, sugar, cream
@@ -213,9 +213,9 @@
         <label class="form-check-label" for="answer7e">steam</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         A hat, a cap, a scarf, a shirt
@@ -242,9 +242,9 @@
         <label class="form-check-label" for="answer8e">a stick</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Speak, talk, tell, say
@@ -271,9 +271,9 @@
         <label class="form-check-label" for="answer9e">go</label>
     </div>
     </form>
-    </li>
+    </div>
 
-    <li>
+    <div>
         <form>
     <li>
         Teacher, headmaster, form mistress, principal
@@ -300,15 +300,19 @@
         <label class="form-check-label" for="answer10e">man</label>
     </div>
     </form>
-    </li>
+    </div>
 </ol>
 
-<button class="btn btn-danger">Sterge</button>
+<button 
+    class="btn btn-danger"
+    onclick="stergere()">Sterge</button>
 <button
         class="btn btn-success"
         onclick="showResults()">Arata rezultate</button>
 
 </body>
+
+<h2>Nota ta este <span id="grade"></span></h2>
 <script src="./script.js"></script>
 
 </html>
